@@ -35,7 +35,7 @@ contract SimpleCryptoKitties is ERC721 {
     return _tokenIdCounter++;
   }
 
-  function breed(uint256 momId, uint256 dadId) public returns (uint256) {
+  function breed(uint256 momId, uint256 dadId) public payable returns (uint256) {
     Kitty memory mom = kitties[momId];
     Kitty memory dad = kitties[dadId];
 
